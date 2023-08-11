@@ -1,6 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:regular,600);
 @import url(https://fonts.googleapis.com/css?family=Raleway:regular,700);
 
+@font-face { 
+  font-family: "PT-Astra-Serif";
+  src: url(PT-Astra-Serif_Bold.woff) format("woff"); /* все современные браузеры, IE9+ */
+  font-weight: bold;     
+}
+
 
 
 * {
@@ -163,9 +169,11 @@ ul {
   background-color: #192444;
 }
 .header__box {
+  
   height: 89px;
   margin-top: 34px;
-  padding: 0 120px;
+  margin: 34px auto 0;
+  padding: 0 10px;
   background-color: #1F294D;
 }
 .sticky {
@@ -197,6 +205,34 @@ ul {
 
 .header__btn img {
   width: 100%;
+}
+.header__contacts {
+  display: flex;
+}
+.contacts-tel {
+  align-self: center;
+}
+.contacts-tel img {
+  margin-right: 6px;
+}
+.contacts-messanger {
+  margin-left: 97px;
+  display: flex;
+  width: 86px;
+  justify-content: space-between;
+}
+
+.contacts-messanger__tel, .contacts-messanger__viber {
+  width: 33px;
+  height: 33px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.contacts-messanger__tel img {
+  margin: 4px 0 0 4px;
+}
+.contacts-messanger__viber img {
+  margin: 7px 0 0 5px;
 }
 
 .menu {
@@ -235,6 +271,7 @@ ul {
   background-size: cover;
   display: flex;
   justify-content: right;
+  background-attachment: fixed;
 }
 .bg:after {
   content: '';
@@ -259,10 +296,22 @@ ul {
   max-width: 500px;
   font-size: 20px;
 }
+.bg__title {
+  font-family: "PT-Astra-Serif";
+  font-size: 64px;
+  font-weight: bold;
+}
+.bg__title-orange {
+  color: #FF9330;
+}
 .bg__subtitle {
   margin-top: 42px;
-  margin-bottom: 61px;  
+  margin-bottom: 61px; 
+  padding-left: 20px; 
+  position: relative;   
+  border-left: 5px solid #FF9330;
 }
+
 .bg__btn {
   width: 422px;
   padding: 16px;
@@ -299,6 +348,14 @@ ul {
   background-color: #27335D;
   text-align: center;
   line-height: 1.3;
+  transition: all ease-in 0.3s;
+}
+.item:hover {
+  transform: scale(1.03);
+  border: 1px solid #fff;
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
+-moz-box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
+box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
 }
 .item-img {
   max-width: 80px;
@@ -400,8 +457,21 @@ ul {
   max-width: 1200px;  
 }
 .services__tabs-title {
+  width: 288px;
+  margin: 0 auto;
   margin-bottom: 40px;
   text-align: center;
+  position: relative;
+}
+.services__tabs-title::after {
+  content: '';
+  background-image: url('../img/icons/plus.svg');
+  position: absolute;
+  top: 0;
+  right: -21px;
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
 }
 .tab__title {
   min-width: 183px;
@@ -490,7 +560,7 @@ ul {
 .swiper-slide-prev, .swiper-slide-next {
   width: 329px;
   height: auto;
-}
+} 
 .main__slider-title {
   width: 100%;
   padding: 40px 0;
@@ -542,6 +612,9 @@ ul {
 .contacts__tel {
   margin: 40px 0 26px;  
 }
+.contacts__tel img {
+  margin-right: 5px;
+}
 .contacts__question {
   margin-bottom: 32px;
   color: #FF9330;
@@ -573,10 +646,9 @@ ul {
 }
 
 .footer__content {
-  padding-bottom: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 0 10px 40px;  
+  display: grid;
+  grid-template-columns: 15% 45% 15% auto;
   align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -599,10 +671,59 @@ ul {
   border-top: 1px solid #fff;
   text-align: center;
 }
+.footer__city {
+  width: 86px;
+  padding-left: 30px;
+}
+.contacts-city__social {  
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-contacts__tel img {
+  margin-right: 6px;
+}
+.contacts-contacts__tel {
+  margin-bottom: 15px;
+}
+.contacts-contacts__email img {
+  margin-right: 6px;
+}
+.contacts-city__city {
+  margin-bottom: 19px;
+  padding-left: 30px;
+  position: relative;
+}
+.contacts-city__city::before {
+  content: "";
+  background-image: url('../img/icons/Map.webp');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 22px;
+}
+.contacts-city__tel, .contacts-city__viber {
+  width: 33px;
+  height: 33px;
+  background-color: #FF9330;
+  border-radius: 50%;
+}
+.contacts-city__tel img {
+  margin: 4px 0 0 4px;
+}
+.contacts-city__viber img {
+  margin: 7px 0 0 5px;
+}
+
 /*---------адаптив-------------------*/
 @media (max-width: 990px) {
   .header__box {  
-    padding: 0 60px;    
+    padding: 0 20px;    
+  }
+  .contacts-messanger {
+    margin-left: 30px;
+    gap: 5px;
+    
   }
   .bg__box {
     padding: 0 0 0 10px;
@@ -610,6 +731,16 @@ ul {
   .services-card__title {
     transform: translateY(0);
     opacity: 1;
+  }
+  .services__content-title, .services__tabs-title {
+    margin-top: 20px;
+  }
+  .contacts {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footer__content {
+    grid-template-columns: 20% 55% 25%;
   }
 }
 
@@ -732,5 +863,145 @@ ul {
 
   .menu__list {
     display: block;
+  }
+  .contacts-messanger, .contacts-tel-span {
+    display: none;
+  }
+  .bg__content {
+    max-width: 416px;
+  }
+  .bg__title {
+    font-size: 55px;
+  }
+  .bg__box {
+    gap: 20px;
+  }
+  .bg__subtitle {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .bg__btn {
+    width: 100%;
+    padding: 12px;
+  }
+  .item {
+    padding: 15px 10px;
+  }
+  .benefits__items {    
+    grid-template-columns: repeat(2, minmax(200px, 1fr));    
+  }
+  .contacts__btn {
+    padding: 12px;
+  }
+  .footer__content {
+    grid-template-columns: 30% 80%;
+    row-gap: 40px;
+  }
+  
+}
+@media (max-width: 400px) {
+  .bg {   
+    padding-bottom: 40px; 
+    background-size: 200%;  
+    background-repeat: no-repeat;
+    background-position-y: 130px;
+  }
+  .bg__box {
+    padding-right: 10px;
+    flex-wrap: wrap-reverse;
+  }
+  .bg__title {
+    position: absolute;
+    top: 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .bg__subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .bg__img {
+    margin-top: 90px;
+  }
+  .bg__btn {
+    width: 94%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .benefits__container {
+    padding: 40px 10px 0;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .benefits__items {
+    padding-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  .item-img {
+    max-width: 34px;
+    max-height: 34px;    
+  }
+  .item-img img {
+    width: 100%;
+  }
+  .item-title {
+    margin: 10px 0 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .item-text {
+    font-size: 8px;
+  }
+  .services__title, .main__slider-title {    
+    padding: 20px 10px;    
+  }
+  .services__content-service {
+    flex-wrap: wrap;
+  }
+  .services__content-title, .contacts__question {
+    font-size: 16px;
+  }
+  .services-card__title {
+    height: 36px;
+    font-size: 12px;
+  }
+  .main__slider-title {
+    margin-bottom: 20px;
+  }
+  
+  .contacts__container {    
+    margin-top: 0px;            
+    font-size: 14px;
+  }
+  .contacts__tel {
+    margin: 20px 0 26px;
+  }
+  .contacts__btn {
+    width: 93%;
+  }
+  .contacts {
+    padding-bottom: 40px;
+  }
+  .footer__box {
+    font-size: 14px;
+  }
+  .footer__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 20px;
+  }
+  .footer-menu__list {
+    display: block;
+    text-align: center;
+  }
+
+}
+@media (max-width: 381px) {
+  .bg__img {
+    margin-top: 130px;
   }
 }
