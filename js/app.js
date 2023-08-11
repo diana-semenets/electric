@@ -19,9 +19,6 @@
     const swiper = new Swiper(".swiper", {
         speed: 1000,
         loop: true,
-        autoplay: {
-            delay: 3000,
-        },
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
@@ -30,9 +27,9 @@
         
         coverflowEffect: {
           rotate: 0,
-          stretch: 90,
-          depth: 0,
-          modifier: 1,
+          stretch: 0,
+          depth: 90,
+          modifier: 2.5,
           slideShadows: false,          
         },
 
