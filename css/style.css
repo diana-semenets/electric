@@ -266,7 +266,7 @@ ul {
 
 .bg {
   padding: 67px 0 78px;
-  background-image: url('../img/main-bg.png');
+  background-image: url('../img/main-bg.webp');
   position: relative;
   background-size: cover;
   display: flex;
@@ -997,6 +997,9 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
   .footer-menu__list {
     display: block;
     text-align: center;
+  }
+  .menu__item + .menu__item {
+    margin-top: 10px;
   }
 
 }
