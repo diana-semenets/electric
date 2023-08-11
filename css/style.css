@@ -295,6 +295,8 @@ ul {
 .bg__content {
   max-width: 500px;
   font-size: 20px;
+  display: grid;
+  gap: 100px;
 }
 .bg__title {
   font-family: "PT-Astra-Serif";
@@ -908,11 +910,13 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
   }
   .bg__box {
     padding-right: 10px;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
-  .bg__title {
-    position: absolute;
-    top: 0;
+  .bg__content {
+    display: grid;
+    gap: 350px;
+  }
+  .bg__title {    
     font-size: 32px;
     font-weight: 700;
   }
@@ -922,7 +926,9 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
     font-size: 14px;
   }
   .bg__img {
-    margin-top: 90px;
+    margin-right: 10px;
+    position: absolute;
+    top: 120px;
   }
   .bg__btn {
     width: 94%;
@@ -1003,8 +1009,9 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
   }
 
 }
-@media (max-width: 381px) {
-  .bg__img {
-    margin-top: 130px;
+@media (max-width: 391px) {
+  .bg__content {
+    display: grid;
+    gap: 300px;
   }
 }
