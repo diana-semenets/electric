@@ -7,8 +7,6 @@
   font-weight: bold;     
 }
 
-
-
 * {
   padding: 0px;
   margin: 0px;
@@ -101,7 +99,6 @@ a {
 ul {
   list-style: none;
 }
-
 
 
 .wrapper {
@@ -282,9 +279,23 @@ ul {
   font-family: "PT-Astra-Serif";
   font-size: 64px;
   font-weight: bold;
+  transform: scale(0.5);
+  opacity: 0;
+  animation: title 2s forwards;
 }
+
 .bg__title-orange {
   color: #FF9330;
+}
+@keyframes title {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .bg__subtitle {
   margin-top: 42px;
@@ -292,7 +303,10 @@ ul {
   padding-left: 20px; 
   position: relative;   
   border-left: 5px solid #FF9330;
+  transform: translateX(-200px);
+  animation: itemImg 2s forwards;
 }
+
 
 .bg__btn {
   width: 422px;
