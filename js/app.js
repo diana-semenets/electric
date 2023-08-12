@@ -274,11 +274,15 @@ window.addEventListener('scroll', () => {
             document.querySelectorAll('nav a').forEach((el) => {
                 if (el.classList.contains('active-menu')) {
                     el.classList.remove('active-menu')
-                }
+                } 
             });
             console.log(i);
             document.querySelectorAll('nav li')[i].querySelector('a').classList.add('active-menu');
+            document.querySelectorAll('section')[i].classList.add('move');
+
         }
     })
-})
+});
+
+
    
