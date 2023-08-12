@@ -244,6 +244,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: inherit;
+  align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -253,6 +255,11 @@ ul {
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+.active-menu {
+  background-color: #27335D;
+  border-bottom: 5px solid #FF9330;
+  padding: 33px 20px 29px;
 }
 /*----------------------------*/
 .title {
@@ -298,6 +305,7 @@ ul {
   
 }
 .bg__title {
+  padding-top: 50px;
   font-family: "PT-Astra-Serif";
   font-size: 64px;
   font-weight: bold;
@@ -487,23 +495,7 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
 }
 
 /*----------------------------*/
-.slider {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
-.swiper-slide {
-  width: 260px;
-  height: auto;
-  background-position: center;
-  background-size: cover;
-  transition: all ease 0.2s;
-}
 
 .swiper-slide img {
   display: block;
@@ -526,7 +518,133 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
   position: relative;
 }
 
-.swiper-vertical .swiper-wrapper {
+
+.gallery {
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.swiper-container {
+  border-radius: 5px;
+  width: 1220px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: fit-content;
+  height: fit-content;
+  font-size: 50px;
+  position: relative;
+  padding-bottom: 50px;
+  font-family: sans-serif;
+}
+
+.swiper-slide {  
+  width: auto;
+  height: fit-content;
+  display: flex;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px;
+  background-color: #27335D;
+}
+
+.swiper-slide .ImgHolder {  
+  width: 100%;
+  height: auto;  
+}
+.swiper-slide-active p {
+  display: block;
+}
+
+.ContentHolder {
+  position: relative;
+  padding: 10px;
+  background-color: #27335D;
+}
+
+.swiper-button {
+  border: 1px solid white;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  display: none;
+}
+.slide-btn-prev {
+  position: relative;
+}
+.slide-btn-prev::before {
+  content: '';
+  background-image: url('../img/icons/arrow-left.png');
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  background-repeat: no-repeat;
+}
+.slide-btn-next {
+  position: relative;
+}
+.slide-btn-next::before {
+  content: '';
+  background-image: url('../img/icons/arrow-right.png');
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 9px;
+  left: 13px;
+  background-repeat: no-repeat;
+}
+
+
+.swiper-slide img {
+  width: 100%;  
+  object-fit: cover;  
+  outline: 2px solid white;
+}
+
+.swiper-slide p {
+  font-size: 16px;
+}
+
+@media (max-width:990px) {
+  .swiper-container {
+    width: 100%;
+  }
+}
+@media (max-width:638px) {
+  .swiper-container {
+    width: 100%;
+  }
+}
+
+@media (max-width:500px) {
+  .swiper-container {
+    width: 90%;
+  }
+}
+
+@media (max-width:300px) {
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    border-radius: 0px;
+  }
+
+  .swiper-container .ImgHolder {
+    border-radius: 0px;
+  }
+  .ContentHolder{
+    border-radius: 0px;
+  }
+}
+/*.swiper-vertical .swiper-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -548,7 +666,7 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
 .swiper-android .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
           transform: translate3d(0px, 0, 0);
-}
+} */
 
 .swiper-slide-active {
   width: 387px;
@@ -558,10 +676,10 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
 .swiper-slide-active .main__slide-text {
   opacity: 1;
 }
-.swiper-slide-prev, .swiper-slide-next {
+/*.swiper-slide-prev, .swiper-slide-next {
   width: 329px;
   height: auto;
-} 
+} */
 .main__slider-title {
   width: 100%;
   padding: 40px 0;
@@ -585,8 +703,8 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  top: 65%;
-  left: 35%;
+  top: 50%;
+  left: 30%;
 }
 .slide-btn-next {
   width: 35px;
@@ -595,8 +713,8 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  top: 65%;
-  right: 35%;
+  top: 50%;
+  right: 30%;
 }
 /*----------------------------*/
 .contacts {
@@ -915,7 +1033,8 @@ box-shadow: 2px 2px 3px 0px rgba(255,255,255,0.4);
     display: grid;
     gap: 350px;
   }
-  .bg__title {    
+  .bg__title {  
+    padding-top: 0px;  
     font-size: 32px;
     font-weight: 700;
   }
