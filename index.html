@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
 <head>
-	<title>Главная</title>
+	<title>Внутрішні роботи</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -31,15 +31,16 @@
 							<span></span>
 						</div>
 					</div>
-					<div class="header__nav menu">
+					<nav class="header__nav menu">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="index.html#services" class="menu__link">Послуги</a></li>
+							<li class="menu__item"><a href="#" class="menu__link active-menu">Головна</a></li>
 							<li class="menu__item"><a href="index.html#benefits" class="menu__link">Переваги</a></li>
+							<li class="menu__item"><a href="index.html#services" class="menu__link">Послуги</a></li>							
 							<li class="menu__item"><a href="index.html#gallery" class="menu__link">Галерея</a></li>
 							<!--<li class="menu__item"><a href="#" class="menu__link">Відгуки</a></li>-->
 							<li class="menu__item"><a href="index.html#contacts" class="menu__link">Контакти</a></li>
 						</ul>
-					</div>
+					</nav>
 					<div class="header__contacts">						
 						<div class="contacts-tel"><a href="tel:+84951235465"><img src="img/PhoneCall-orange.webp" alt="+8(495) 123-54-65"><span class="contacts-tel-span">+8(495) 123-54-65</span></a></div>
 						<div class="contacts-messanger">
@@ -167,13 +168,13 @@
 					</div>
 				</section>
 
-				<section class="slider" id="gallery">
-					<!-- Оболочка слайдера -->
+<!----				<section class="slider" >
+					
 					<div class="main__slider swiper">
 						<h2 class="main__slider-title title">Наші роботи</h2>
-						<!-- Двигающееся часть слайдера -->
+						
 						<div class="main__wrapper swiper-wrapper">
-							<!-- Слайд -->
+							
 							<div class="main__slide swiper-slide">
 								<img src="img/slider/slider1.svg" alt="">
 								<p class="main__slide-text">Установка освітлення, монтажні роботи</p>
@@ -196,6 +197,19 @@
 							</div>
 						</div>
 
+						<div class="swiper-button-prev slide-btn-prev"></div>
+  						<div class="swiper-button-next slide-btn-next"></div>
+						
+					</div>
+				</section>  -->
+
+				<section class="gallery" id="gallery">
+					<h2 class="main__slider-title title">Наші роботи</h2>
+					<div id="craouselContainer" class="swiper-container">
+						<div class="swiper-wrapper" id="slideHolder">
+							<!-- Slides -->
+				
+						</div>
 						<div class="swiper-button-prev slide-btn-prev"></div>
   						<div class="swiper-button-next slide-btn-next"></div>
 						
@@ -254,6 +268,7 @@
 </div> -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/slider.js"></script>
 </body>
 
 </html>
