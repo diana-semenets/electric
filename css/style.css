@@ -129,12 +129,6 @@ ul {
   min-width: 0;
 }
 
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
 
 [class*=__container] {
   max-width: 75rem;
@@ -148,8 +142,7 @@ ul {
 .header {
   background-color: #192444;
 }
-.header__box {
-  
+.header__box {  
   height: 89px;
   margin-top: 34px;
   margin: 34px auto 0;
@@ -677,10 +670,6 @@ ul {
 .swiper-slide-active .main__slide-text {
   opacity: 1;
 }
-/*.swiper-slide-prev, .swiper-slide-next {
-  width: 329px;
-  height: auto;
-} */
 .main__slider-title {
   width: 100%;
   padding: 40px 0;
@@ -889,7 +878,11 @@ ul {
     display: -ms-flexbox;
     display: flex;    
   }
-
+  .active-menu {
+    background-color: transparent;
+    border-bottom: 2px solid #FF9330;
+    padding: 2px;
+  }
   .header__nav li {
     display: block;
   }
@@ -1078,11 +1071,11 @@ ul {
   }
   .item-title {
     margin: 10px 0 4px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
   }
   .item-text {
-    font-size: 8px;
+    font-size: 10px;
   }
   .services__title, .main__slider-title {    
     padding: 20px 10px;    
@@ -1099,6 +1092,14 @@ ul {
   }
   .main__slider-title {
     margin-bottom: 20px;
+  }
+  .slide-btn-prev {
+    top: 30%;
+    left: 2%;
+  }
+  .slide-btn-next {
+    top: 30%;
+    right: 2%;
   }
   
   .contacts__container {    
