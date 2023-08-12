@@ -1,31 +1,31 @@
 var testiomnialData = [
     {
-        avatar: "img/slider/slider1.svg",
+        avatar: "img/service1.webp",
         name: "Установка освітлення, монтажні роботи",
     },
     {
-        avatar: "img/slider/slider2.svg",
-        name: "Установка освітлення, монтажні роботи",
-        
-    },
-    {
-        avatar: "img/slider/slider3.svg",
+        avatar: "img/service2.webp",
         name: "Установка освітлення, монтажні роботи",
         
     },
     {
-        avatar: "img/slider/slider4.svg",
+        avatar: "img/service3.webp",
+        name: "Установка освітлення, монтажні роботи",
+        
+    },
+    {
+        avatar: "img/service4.webp",
         name: "Установка освітлення, монтажні роботи",
     },
     {
-        avatar: "img/slider/slider5.svg",
+        avatar: "img/service3.webp",
         name: "Установка освітлення, монтажні роботи",
     },
     {
-        avatar: "img/slider/slider3.svg",
+        avatar: "img/service2.webp",
         name: "Установка освітлення, монтажні роботи",
     }, {
-        avatar: "img/slider/slider2.svg",
+        avatar: "img/service1.webp",
         name: "Установка освітлення, монтажні роботи",
     }]
 
