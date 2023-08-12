@@ -14,30 +14,11 @@
         }
     }));
 
-//----------слайдер-------------------//
 
-    const swiper = new Swiper(".swiper", {
-        speed: 1000,
-        loop: true,
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        //initialSlide: 1,
-        
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 90,
-          modifier: 2.5,
-          slideShadows: false,          
-        },
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-      });
+
+
+      
 
 //----------таби-------------------//
 
@@ -270,6 +251,7 @@ setTimeout((() => {
 
 tabs();
 
+//----------скрол-------------------//
 
 window.onscroll = function() {myFunction()};
 
@@ -283,4 +265,20 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+
+    document.querySelectorAll('section').forEach((el, i) => {
+        if (el.offsetTop - document.querySelector('nav').clientHeight <= scrollDistance) {
+            document.querySelectorAll('nav a').forEach((el) => {
+                if (el.classList.contains('active-menu')) {
+                    el.classList.remove('active-menu')
+                }
+            });
+            console.log(i);
+            document.querySelectorAll('nav li')[i].querySelector('a').classList.add('active-menu');
+        }
+    })
+})
    
